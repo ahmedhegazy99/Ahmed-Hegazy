@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -10,7 +9,7 @@ import pages.HomePage;
 
 import java.util.List;
 
-public class testSearch {
+public class TestSearch {
 
     HomePage homePage;
     String siteUrl = "https://demo.nopcommerce.com/";
@@ -108,6 +107,17 @@ public class testSearch {
         homePage.submitText(searchBox,searchText);
         items = homePage.getElements(By.className("item-box"));
         softAssert.assertEquals(items.size(),2);
+    }
+
+    @Test
+    public void validateHandlingSqlInjection(){
+        searchText = "lenovo or 1=1";
+        String h1Msg;
+
+        GetElement();
+        homePage.submitText(searchBox,searchText);
+        h1Msg = homePage.getElement(By.tagName("h1")).getText();
+        softAssert.assertEquals(h1Msg, "Sorry, you have been blocked");
     }
 
 }

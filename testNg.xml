@@ -1,0 +1,7 @@
+<suite name="Suite1" verbose="1" >
+    <test name="InstabugTask" >
+        <classes>
+            <class name="TestSearch" />
+        </classes>
+    </test>
+</suite>
