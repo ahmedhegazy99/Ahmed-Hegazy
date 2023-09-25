@@ -46,6 +46,8 @@ public class HomePage {
         return browserActions.checkElementVisabilty(element);
     }
 
+    //back to previous page
+    public void back(){browserActions.backSite();}
     //close site
     public void closeSite() {
         browserActions.closeSite();

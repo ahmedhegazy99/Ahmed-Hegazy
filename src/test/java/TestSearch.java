@@ -118,6 +118,7 @@ public class TestSearch {
         homePage.submitText(searchBox,searchText);
         h1Msg = homePage.getElement(By.tagName("h1")).getText();
         softAssert.assertEquals(h1Msg, "Sorry, you have been blocked");
+        homePage.back();
     }
 
 }

@@ -55,6 +55,9 @@ public class BrowserActions {
         return e.isDisplayed();
     }
 
+    //back to previous page
+    public void backSite(){driver.navigate().back();}
+
     //close site
     public void closeSite() {
         driver.quit();
