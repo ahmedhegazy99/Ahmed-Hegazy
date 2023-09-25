@@ -2,6 +2,9 @@
 ## InstabugTask - SearchBox Test Automation
 > Selenium Java project to test search UI functionality
 ### TestCases
+> [TestCases sheet](
+https://docs.google.com/spreadsheets/d/1xauNW8OzrR4Tpwq3-KSjnccKYEOiybmxSFm0ueREFsU/edit?usp=drivesdk)
+
 * validate search box visability
 * validat all elements returned
 * validate specific element is returned
