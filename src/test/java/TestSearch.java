@@ -44,6 +44,7 @@ public class testSearch {
         boolean isVisible = homePage.isElementVisible(searchBox);
         Assert.assertTrue(isVisible);
     }
+
     @Test
     public void validateAllElementsReturned(){
         searchText = "lenovo";
@@ -99,6 +100,14 @@ public class testSearch {
         softAssert.assertEquals(alertMsg, "Please enter some search keyword");
     }
 
+    @Test
+    public void validateSearchWithWhiteSpace(){
+        searchText = "   lenovo     ";
 
+        GetElement();
+        homePage.submitText(searchBox,searchText);
+        items = homePage.getElements(By.className("item-box"));
+        softAssert.assertEquals(items.size(),2);
+    }
 
 }
