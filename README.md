@@ -11,5 +11,6 @@ https://docs.google.com/spreadsheets/d/1xauNW8OzrR4Tpwq3-KSjnccKYEOiybmxSFm0ueRE
 * validate multiple term elements is returned
 * validate empty search box alert
 * validate no elements are returned and empty state message appears correctly
+* Validate search with white space before and after keyword
 
 > [Google Drive Directory for task 1 & 2](https://drive.google.com/drive/folders/1jO99cs29K5_JXhKR4cydcapVdBpwtI9a?usp=sharing)
